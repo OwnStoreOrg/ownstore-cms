@@ -1,0 +1,63 @@
+.page-layout-desktop-width {
+  width: calc(100% - 350px);
+}
+
+// Section item update modal overrides
+.sectionItemUpdateModalOverrides, 
+.imageUpdateModalOverrides,
+.productTagUpdateModalOverrides,
+.productAttributeUpdateModalOverrides,
+.productFeatureSectionUpdateModalOverrides {
+  & .modal-header {
+    @apply bg-white border-b border-gray400 rounded-t-lg;
+  }
+
+  @include mobile {
+    @apply w-full absolute m-0 bottom-0 pt-1;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    & .content {
+      height: calc(100vh - 130px);
+      @apply overflow-y-auto;
+    }
+  }
+
+  @include desktop {
+    width: 500px !important;
+
+    & .content {
+      height: 460px;
+      @apply rounded-b-lg overflow-y-auto;
+    }
+  }
+}
+
+// Cancel order modal overrides
+.cancelOrderModalOverrides {
+  & .modal-header {
+    @apply bg-white border-b border-gray400 rounded-t-lg;
+  }
+
+  @include mobile {
+    @apply w-full absolute m-0 bottom-0 pt-1;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    & .content {
+      height: calc(100vh - 130px);
+      @apply overflow-y-auto;
+    }
+  }
+
+  @include desktop {
+    width: 500px !important;
+
+    & .content {
+      height: 400px;
+      @apply rounded-b-lg overflow-y-auto;
+    }
+  }
+}

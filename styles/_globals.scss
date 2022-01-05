@@ -1,0 +1,125 @@
+// globals
+a {
+  @apply text-primaryText transition-all;
+
+  &:hover {
+    @apply text-primaryTextBold;
+  }
+}
+
+body {
+  @apply text-primaryText font-primary;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+
+div:focus {
+  outline: none !important;
+}
+
+ul {
+  @apply list-disc;
+}
+
+// Slick carousel globals
+.slick-track {
+  margin-left: inherit !important;
+}
+
+.slick-prev,
+.slick-next {
+  @apply rounded-full shadow transition-all;
+  z-index: 2;
+  top: 40% !important;
+  padding: 10px !important;
+  height: theme('height.10') !important;
+  width: theme('width.10') !important;
+  background: theme('backgroundColor.white') !important;
+
+  &:hover {
+    @apply shadow-md;
+  }
+
+  &::before {
+    @apply opacity-100;
+  }
+
+  &:focus, &:hover, &:active {
+    @apply bg-white;
+  }
+}
+
+.slick-prev {
+  left: -12px !important;
+
+  @media (min-width: 1280px) and (max-width: 1320px) {
+    left: 0px !important;
+  }
+}
+
+.slick-next {
+  right: -12px !important;
+
+  @media (min-width: 1280px) and (max-width: 1320px) {
+    right: 0px !important;
+  }
+}
+
+// Accordion globals
+.Collapsible__trigger {
+  & .collapsible-chevron-icon {
+    @apply transition-transform;
+  }
+
+  &.is-open {
+    & .collapsible-chevron-icon {
+      @apply transform rotate-180;
+    }
+  } 
+}
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-hover-bg {
+  &:hover {
+    background: inherit !important;
+  }
+}
+
+.mobile-view {
+  display: inherit;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-view {
+  display: none;
+
+  @include desktop {
+    display: inherit;
+  }
+}
+
+.underline-dashed {
+  text-decoration: underline dashed;
+}
+

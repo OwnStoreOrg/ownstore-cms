@@ -1,0 +1,3 @@
+export const getHomePageUrl = () => {
+  return '/'
+}

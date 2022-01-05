@@ -1,0 +1,35 @@
+// include taiwind directories
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// imports
+@import 'mixins';
+@import 'fonts';
+@import 'globals';
+@import 'input';
+@import 'loader';
+@import 'nprogress';
+@import 'components';
+@import 'html-body';
+
+// User forms
+.user-input {
+  @apply py-2;
+
+  &::placeholder {
+    @apply text-base;
+  }
+
+  &-error {
+    border-color: red !important;
+  }
+
+  &-group {
+    @apply mb-5;
+  }
+
+  &-label {
+    @apply text-sm text-primaryTextBold font-medium mb-2 font-normal font-primary-medium;
+  }
+}

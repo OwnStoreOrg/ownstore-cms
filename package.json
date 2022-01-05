@@ -1,0 +1,53 @@
+{
+  "name": "own-store-cms",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:init": "next dev -p 3002",
+    "dev": "run-s sync:contract dev:init",
+    "start:local": "STORE_CMS_ENV=local npm run dev",
+    "start:localprod": "STORE_CMS_ENV=localproduction npm run dev",
+    "start": "next start",
+    "build:init": "next build",
+    "build": "run-s build:init",
+    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "sync:contract": "rm -rf ./contract && cp -fR ../own-store-api/src/app/contract ."
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "dayjs": "^1.10.6",
+    "debug": "^4.3.1",
+    "js-cookie": "^3.0.1",
+    "lodash.throttle": "^4.1.1",
+    "next": "11.1.2",
+    "node-sass": "^5.0.0",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-collapsible": "^2.8.4",
+    "react-dom": "17.0.2",
+    "react-hot-toast": "^2.1.1",
+    "ua-parser-js": "^0.7.28",
+    "use-ssr": "^1.0.24"
+  },
+  "devDependencies": {
+    "@heroicons/react": "^1.0.4",
+    "@next/eslint-plugin-next": "^11.1.2",
+    "@types/debug": "^4.1.7",
+    "@types/js-cookie": "^2.2.7",
+    "@types/react": "17.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "autoprefixer": "^10.3.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.20.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.2.7",
+    "typescript": "4.4.2"
+  }
+}
